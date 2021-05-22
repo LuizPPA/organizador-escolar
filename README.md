@@ -18,6 +18,6 @@
 ## Grupo
 [Eduardo Dias](https://github.com/eduardo2512)
 
-[João Vitor de Morais Rocha](https://github.com/joavmr)
+[João Vitor de Morais Rocha](https://github.com/joaovmr)
 
 [Luiz Philippe Pereira](https://github.com/LuizPPA)
