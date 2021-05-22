@@ -14,3 +14,8 @@
     * Banco de dados: MongoDB
     * Controle de versão: Git
     * Organização: Notion
+
+## Grupo
+[Eduardo Dias](https://github.com/eduardo2512)
+[João Vitor de Morais Rocha](https://github.com/joavmr)
+[Luiz Philippe Pereira](https://github.com/LuizPPA)
