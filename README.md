@@ -16,6 +16,8 @@
     * Organização: Notion
 
 ## Grupo
+[Caio Campos](https://github.com/kaioalex2018)
+
 [Eduardo Dias](https://github.com/eduardo2512)
 
 [João Vitor de Morais Rocha](https://github.com/joaovmr)
