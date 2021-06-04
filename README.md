@@ -1,25 +1,40 @@
 # Organizador Escolar
 
-* Escopo: Organizador escolar
-* Funcional:
+* ## Escopo: Organizador Escolar
+* ### Funcionalidades:
     * Marcar horários de aula
     * Consultar horários de aula
     * Marcar horários de provas e atividades
     * Consultar horário de provas e atividades
     * Cadastrar notas de atividades e provas
     * Cadastrar links de aulas
-* Tecnológico
+
+* ### Time (e respectivos papéis)
+   * [Caio Alexandre Campos Maciel](https://github.com/kaioalex2018)
+   * [Eduardo Dias](https://github.com/eduardo2512)
+   * [João Vitor de Morais Rocha](https://github.com/joaovmr)
+   * [Luiz Philippe Pereira](https://github.com/LuizPPA)
+   
+* ### Tecnologias
     * Frontend: Js (React)
     * Backend: Js (Node)
     * Banco de dados: MongoDB
     * Controle de versão: Git
     * Organização: Notion
+ 
+* ### Diagrama Arquitetural (atualizado, com principais classes/arquivos)
 
-## Grupo
-[Caio Campos](https://github.com/kaioalex2018)
+* ### Backlog do Produto
 
-[Eduardo Dias](https://github.com/eduardo2512)
+* ### Backlog do Sprint
+   * Histórias, tarefas, responsáveis, status (concluído ou não)
 
-[João Vitor de Morais Rocha](https://github.com/joaovmr)
 
-[Luiz Philippe Pereira](https://github.com/LuizPPA)
+
+
+
+
+
+
+
+
