@@ -1,7 +1,7 @@
 # Organizador Escolar
 
 * ## Escopo: Organizador Escolar
-* 
+
 * ### Funcionalidades:
     * Marcar horários de aula
     * Consultar horários de aula
