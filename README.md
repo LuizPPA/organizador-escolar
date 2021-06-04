@@ -18,6 +18,7 @@
 * ### Tecnologias
     * Frontend: Js (React)
     * Backend: Js (Node)
+    * Debug do backend: Postman
     * Banco de dados: MongoDB
     * Controle de versão: Git
     * Organização: Notion
