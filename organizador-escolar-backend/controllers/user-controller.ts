@@ -8,7 +8,7 @@ export const userController = {
         const user = new User({name, login, password});
         try {
             await user.save();
-            return { name: user.name, login: user.login };
+            return { id: user._id, name: user.name, login: user.login };
         }
         catch{
             throw 'Error creating user';

@@ -9,7 +9,7 @@ userRouter.post('/create', async (req, res, next) => {
     const password = req.body['password'];
     try{
         const user = await userController.create(name, login, password);
-        res.send({
+        res.status(201).send({
             type: 'OK',
             data: { user },
         });
