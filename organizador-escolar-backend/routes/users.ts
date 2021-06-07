@@ -1,19 +1,20 @@
 import { Router } from 'express';
-import { User } from '../models/user-model'
+import { userController } from '../controllers/user-controller'
 export const userRouter = Router();
 
-/* GET users listing. */
+/* POST create user. */
 userRouter.post('/create', async (req, res, next) => {
-  const user = new User({
-    name: 'fulano',
-    login: 'fulano',
-    password: '12345678',
-  })
-  try{
-    await user.save();
-    res.send(user);
-  }
-  catch{
-    res.status(406).send('Error creating user');
-  }
+    const name = req.body['name'];
+    const login = req.body['login'];
+    const password = req.body['password'];
+    try{
+        const user = await userController.create(name, login, password);
+        res.send({
+            type: 'OK',
+            data: { user },
+        });
+    }
+    catch(e){
+        res.status(406).send(e);
+    }
 });

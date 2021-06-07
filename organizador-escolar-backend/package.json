@@ -6,9 +6,11 @@
     "start": "nodemon ./bin/index.ts"
   },
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.12",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^15.12.1",
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
