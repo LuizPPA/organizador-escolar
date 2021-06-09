@@ -1,7 +1,20 @@
-import express from 'express';
-export const userRouter = express.Router();
+import { Router } from 'express';
+import { userController } from '../controllers/user-controller'
+export const userRouter = Router();
 
-/* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
+/* POST create user. */
+userRouter.post('/create', async (req, res, next) => {
+    const name = req.body['name'];
+    const login = req.body['login'];
+    const password = req.body['password'];
+    try{
+        const user = await userController.create(name, login, password);
+        res.status(201).send({
+            type: 'OK',
+            data: { user },
+        });
+    }
+    catch(e){
+        res.status(406).send(e);
+    }
+});
