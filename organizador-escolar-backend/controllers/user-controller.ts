@@ -14,4 +14,22 @@ export const userController = {
             throw 'Error creating user';
         }
     },
+
+    async login(login: string, rawPassword: string){
+        // search user in db
+        const user = await User.findOne({login: login});
+    
+        // user == null
+        if(!user){
+            throw "User doesn't exist";
+        }
+    
+        // password doesn't match with saved in db
+        if(!bcrypt.compareSync(rawPassword, user.password)){
+            throw "Password invalid!";
+        }
+    
+        return user;
+    },
 }
+
