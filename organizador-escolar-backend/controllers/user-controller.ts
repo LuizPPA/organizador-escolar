@@ -29,7 +29,7 @@ export const userController = {
             throw "Password invalid!";
         }
     
-        return 'Login Successfull';
+        return user;
     },
 }
 
