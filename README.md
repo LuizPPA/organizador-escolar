@@ -30,14 +30,4 @@
    [User Stories](https://www.notion.so/4489b796accd47eaa7cbfa46d315466b?v=5abcfbbe05604c30958bb7ac909ed513)
 
 ### Backlog do Sprint
-   [Board no notion](https://www.notion.so/431c9c8b5bd94165bd0260524a5e6c28?v=fed48de73fb148f0bd9b7a88b06805b4)
-
-
-
-
-
-
-
-
-
-
+   [Board no notion](https://www.notion.so/431c9c8b5bd94165bd0260524a5e6c28?v=fed48de73fb148f0

@@ -3,7 +3,7 @@ import { userController } from '../controllers/user-controller'
 export const userRouter = Router();
 
 /* POST create user. */
-userRouter.post('/create', async (req, res, next) => {
+userRouter.post('/create', async (req, res, _next) => {
     const name = req.body['name'];
     const login = req.body['login'];
     const password = req.body['password'];
