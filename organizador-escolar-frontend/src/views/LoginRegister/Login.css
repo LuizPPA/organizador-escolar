@@ -1,0 +1,34 @@
+.Login{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form{
+    padding: 16px 0px;
+    width: 40vw;
+    border-radius: 8px;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+
+}
+
+.Login a{
+    margin-top: 8px;
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.Login a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
