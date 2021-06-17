@@ -11,7 +11,7 @@
 * Cadastrar links de aulas
 
 ### Time
-* [Caio Alexandre Campos Maciel](https://github.com/kaioalex2018)
+* [Caio Alexandre Campos Maciel](https://github.com/kaioalex)
 * [Eduardo Dias](https://github.com/eduardo2512)
 * [João Vitor de Morais Rocha](https://github.com/joaovmr)
 * [Luiz Philippe Pereira](https://github.com/luizppa)
