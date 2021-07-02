@@ -21,3 +21,19 @@ lessonRouter.post('/create', async (req, res, _next) => {
         res.status(406).send(e);
     }
 });
+
+/* PUT save link. */
+lessonRouter.put('/save', async (req, res, _next) => {
+    const code = req.body['code'];
+
+    try{
+        const link = await lessonController.save(code);
+        res.status(201).send({
+            type: 'OK',
+            data: { link },
+        });
+    }
+    catch(e){
+        res.status(406).send(e);
+    }
+});
