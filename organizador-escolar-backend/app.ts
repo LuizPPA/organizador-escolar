@@ -7,6 +7,7 @@ import { db } from './lib/db';
 import { rootRouter } from './routes/index';
 import { userRouter } from './routes/user';
 import { lessonRouter } from './routes/lesson';
+import { linkRouter } from './routes/link';
 
 const app = express();
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -23,5 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', rootRouter);
 app.use('/user', userRouter);
 app.use('/lesson', lessonRouter);
+app.use('/link', linkRouter);
 
 export default app;
