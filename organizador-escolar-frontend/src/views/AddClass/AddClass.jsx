@@ -22,7 +22,7 @@ const AddClass = () =>{
 
     useEffect(() =>{
         newClassName && newClassLink && newClassCode && newClassDescription && newClassProfessor && newClassDate && setCanAddClass(true)
-        (!newClassName || !newClassLink || !newClassCode || !newClassDescription || !newClassProfessor || !newClassDate) && setCanAddClass(false)
+        !newClassName || !newClassLink || !newClassCode || !newClassDescription || !newClassProfessor || !newClassDate && setCanAddClass(false)
     }, [newClassName, newClassLink, newClassCode, newClassDescription, newClassProfessor, newClassDate ]);
 
     const handleAddClass = () => {
