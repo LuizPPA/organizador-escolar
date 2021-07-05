@@ -25,12 +25,13 @@ lessonRouter.post('/create', async (req, res, _next) => {
 /* PUT save link. */
 lessonRouter.put('/save', async (req, res, _next) => {
     const code = req.body['code'];
+    const link = req.body['link'];
 
     try{
-        const link = await lessonController.save(code);
+        const data = await lessonController.saveLink(code, link);
         res.status(201).send({
             type: 'OK',
-            data: { link },
+            data: { data },
         });
     }
     catch(e){

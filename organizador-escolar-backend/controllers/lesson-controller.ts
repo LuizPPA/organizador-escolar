@@ -16,7 +16,7 @@ export const lessonController = {
         }
     },
 
-    async save(code: String) {
+    async saveLink(code: String, link: String) {
         try {
             // search lesson in db
             const lesson = await Lesson.findOne({ code: code });
@@ -25,7 +25,7 @@ export const lessonController = {
                 throw "Lesson doesn't exist";
             }
 
-            lesson["links"] = `/lesson/${code}`;
+            lesson["links"].push(link);
             await lesson.save();
 
             return lesson;
