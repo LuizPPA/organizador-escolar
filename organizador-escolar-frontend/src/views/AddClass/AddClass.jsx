@@ -154,7 +154,7 @@ const AddClass = () =>{
                 {[1, 2, 3, 4, 5].map(weekday =>  (
                     <Grid item xs={2} key={weekday} className={classes.weekdayColumn}>
                         {!!classList && classList
-                            .filter(lesson => new Date(lesson.date).getDay() == weekday )
+                            .filter(lesson => new Date(lesson.date).getDay() === weekday )
                             .map((lesson, index) => 
                                 <ClassCard key={index} item={lesson} deleteItem={handleDeleteItem}/>
                             )
