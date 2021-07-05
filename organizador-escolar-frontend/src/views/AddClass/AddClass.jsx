@@ -5,7 +5,7 @@ import ClassCard from './ClassCard';
 const AddClass = () =>{
     const classes = useStyles();
 
-    const [classList, setClassList] = useState([]);
+    const [classList, setClassList] = useState(JSON.parse(localStorage.getItem("lessons")) || []);
 
     const [newClassName, setNewClassName] = useState("");
     const [newClassLink, setNewClassLink] = useState("");
@@ -24,12 +24,14 @@ const AddClass = () =>{
         classListClone.push(newClass);
 
         setClassList(classListClone);
+        localStorage.setItem("lessons", JSON.stringify(classListClone));
     };
 
     const handleDeleteItem = (name) =>{
         //chamada pra apagar do backend
         const newClassList = classList.filter(e => e.name !== name);
         setClassList(newClassList);
+        localStorage.setItem("lessons", JSON.stringify(newClassList));
     }
 
     return (
