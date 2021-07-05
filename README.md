@@ -24,6 +24,9 @@
 * Controle de versão: Git
 * Organização: Notion
 
+### Diagrama Arquitetural 
+![Diagrama](documentation/Diagrama_organizador.png)
+
 ### Backlog do Produto
    [User Stories](https://www.notion.so/4489b796accd47eaa7cbfa46d315466b?v=5abcfbbe05604c30958bb7ac909ed513)
 

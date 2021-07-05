@@ -3,6 +3,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import { db } from './lib/db';
+import cors from 'cors';
 
 import { rootRouter } from './routes/index';
 import { userRouter } from './routes/user';
@@ -14,6 +15,7 @@ db.once('open', () => {
     console.log('Database connected');
 });
 
+app.use(cors({}));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -23,5 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', rootRouter);
 app.use('/user', userRouter);
 app.use('/lesson', lessonRouter);
+
 
 export default app;

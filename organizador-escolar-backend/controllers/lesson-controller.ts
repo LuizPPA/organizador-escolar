@@ -15,4 +15,23 @@ export const lessonController = {
             throw e;
         }
     },
+
+    async saveLink(code: String, link: String) {
+        try {
+            // search lesson in db
+            const lesson = await Lesson.findOne({ code: code });
+
+            if (!lesson) {
+                throw "Lesson doesn't exist";
+            }
+
+            lesson["links"].push(link);
+            await lesson.save();
+
+            return lesson;
+        }
+        catch (e) {
+            throw e;
+        }
+    },
 }

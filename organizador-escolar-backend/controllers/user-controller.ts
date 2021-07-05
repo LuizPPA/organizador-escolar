@@ -10,8 +10,8 @@ export const userController = {
             await user.save();
             return { id: user._id, name: user.name, login: user.login };
         }
-        catch{
-            throw 'Error creating user';
+        catch(e){
+            throw 'Error creating user: ' + e.message;
         }
     },
 
