@@ -177,7 +177,7 @@ const Login = (props) =>{
                     sucessRegister && <Alert className={classes.btn} variant="filled" severity="success">Sucesso ao se registrar</Alert>
                 }
 
-                <a className={classes.link} onClick={ () => setRegisterLogin(!registerLogin)}>{registerLogin ? 'Novo Usuario? Se cadastre' : 'Já tem Cadastro? Clique aqui para Logar'}</a>
+                <p className={classes.link} onClick={ () => setRegisterLogin(!registerLogin)}>{registerLogin ? 'Novo Usuario? Se cadastre' : 'Já tem Cadastro? Clique aqui para Logar'}</p>
             </div>
         </div>
     )

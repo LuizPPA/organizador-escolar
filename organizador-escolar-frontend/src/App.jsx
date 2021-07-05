@@ -1,12 +1,20 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Routes from "./Routes"
 import { makeStyles } from "@material-ui/core"
 
 
 const App = _ =>{
     const classes = useStyles();
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [userInfo, setUserInfo] = useState()
+    const [isAuthenticated, setIsAuthenticated] = useState(!!JSON.parse(localStorage.getItem('userToken')));
+    const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem('userInfo')));
+
+    useEffect(() => {
+        localStorage.setItem('userToken', JSON.stringify(isAuthenticated));
+    }, [isAuthenticated]);
+
+    useEffect(() => {
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    }, [userInfo]);
 
     return(
         <div className={classes.App}>
