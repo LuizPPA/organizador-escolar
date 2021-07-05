@@ -10,7 +10,16 @@ const Routes = props =>{
 
     return(
         <BrowserRouter>
-            <Route path="/" exact component={()=><Login setUserInfo={setUserInfo} autenticate={setIsAuthenticated}/>} />
+            <Route path="/" exact 
+                component={()=>{
+                    if(!isAuthenticated) {
+                        return <Login setUserInfo={setUserInfo} autenticate={setIsAuthenticated}/>
+                    }
+                    else{
+                        return <Redirect to="/organizador"/>
+                    }
+                }}
+            />
             {
                 isAuthenticated && <Route path="/organizador" exact component={()=> <Header logout={setIsAuthenticated}> <AddClass /> </Header>}/>
             }

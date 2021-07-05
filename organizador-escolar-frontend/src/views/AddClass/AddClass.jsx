@@ -13,7 +13,7 @@ const AddClass = () =>{
     const [newClassDescription, setNewClassDescription] = useState("");
     const [newClassProfessor, setNewClassProfessor] = useState("");
     const [newClassDate, setNewClassDate] = useState("2021-07-04T10:30");
-    const [canAddClass, setCanAddClass] = useState(false)
+    const [canAddClass, setCanAddClass] = useState(false);
 
     useEffect(() =>{
         //chamada pro backEnd
@@ -21,13 +21,19 @@ const AddClass = () =>{
     }, []);
 
     useEffect(() =>{
-        newClassName && newClassLink && newClassCode && newClassDescription && newClassProfessor && newClassDate && setCanAddClass(true)
-        !newClassName || !newClassLink || !newClassCode || !newClassDescription || !newClassProfessor || !newClassDate && setCanAddClass(false)
+        setCanAddClass(newClassName && newClassLink && newClassCode && newClassDescription && newClassProfessor && newClassDate);
     }, [newClassName, newClassLink, newClassCode, newClassDescription, newClassProfessor, newClassDate ]);
 
     const handleAddClass = () => {
         //chamar o backend para salva a aula
-        const newClass = {name: newClassName, link:newClassLink, code: newClassCode, description: newClassDescription, professor: newClassProfessor, date: newClassDate};
+        const newClass = {
+            name: newClassName,
+            link:newClassLink,
+            code: newClassCode,
+            description: newClassDescription,
+            professor: newClassProfessor,
+            date: newClassDate
+        };
 
         const classListClone = [...classList];
 
@@ -145,9 +151,16 @@ const AddClass = () =>{
             </Grid>
 
             <Grid container item xs={12}>
-                {classList && classList.map(e => 
-                    <ClassCard item={e} deleteItem={handleDeleteItem}/>
-                )}
+                {[1, 2, 3, 4, 5].map(weekday =>  (
+                    <Grid item xs={2} key={weekday} className={classes.weekdayColumn}>
+                        {!!classList && classList
+                            .filter(lesson => new Date(lesson.date).getDay() == weekday )
+                            .map((lesson, index) => 
+                                <ClassCard key={index} item={lesson} deleteItem={handleDeleteItem}/>
+                            )
+                        }
+                    </Grid>
+                ))}
             </Grid>
         </Grid>
     )
@@ -155,23 +168,26 @@ const AddClass = () =>{
 
 const useStyles = makeStyles((theme) => ({
     fullWidth:{
-        width: "100%"
+        width: "100%",
     },
     fullHeight:{
-        height: "100%"
+        height: "100%",
     },
     container:{
-        padding: "32px 16px"
+        padding: "32px 16px",
     },
     container2:{
         marginTop:"10px",
     },
     dataHora:{
-        paddingLeft:"32px"
+        paddingLeft:"32px",
     },
     semana:{
         justifyContent:"center",
-        marginTop:"10px"
+        marginTop:"10px",
+    },
+    weekdayColumn:{
+        padding: "10px",
     }
 }));
 
